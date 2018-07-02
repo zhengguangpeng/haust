@@ -1,0 +1,31 @@
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+		"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    
+
+	<!--监控系统调用的Action -->
+	<package name="monitor"  extends="struts-default"><!--继承自默认包 --> 	
+   	
+   	
+   		<!-- 用户登录 -->
+		<action name="login" class="com.transn.action.rule.LoginAction">
+		    <result name="main">index.jsp</result>
+			<result name="login">login.jsp </result>			
+		</action>
+				
+		 <action name="ruleAction"  class="com.transn.action.rule.RuleAction">
+		    <result name="contentRuleList">/page/rule/contentRuleList.jsp</result>
+		    <result name="contentRuleAdd">/page/rule/contentRuleAdd.jsp</result>		    
+		    <result name="contentRuleDetail">/page/rule/contentRuleDetail.jsp</result>
+		   
+		    <result name="timeRuleList">/page/rule/timeRuleList.jsp</result>		    
+		    <result name="timeRuleAdd">/page/rule/timeRuleAdd.jsp</result>		    
+		    <result name="timeRuleDetail">/page/rule/timeRuleDetail.jsp</result>
+		    
+		    <result name="readme">/page/rule/ruleReadme.jsp</result>
+		   
+		</action>
+   		
+	</package>
+</struts>

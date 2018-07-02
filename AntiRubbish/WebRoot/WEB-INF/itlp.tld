@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<description>ITLP Custom Functions</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>itlp</short-name>
+	<uri>http://www.transn.com/itlpFunction</uri>
+	
+	<!-- 格式化时间 -->
+	<function>
+		<name>fmtStringDate</name>
+		<function-class>
+			com.transn.service.pub.DictService
+		</function-class>
+		<function-signature>
+			java.lang.String fmtStringDate(java.lang.String)
+		</function-signature>
+	</function>
+	
+	<!-- 定义获取语种方法 -->
+	<function>
+		<name>getLangeName</name>
+		<function-class>
+			com.transn.service.pub.DictService
+		</function-class>
+		<function-signature>
+			java.lang.String getLangeName(int)
+		</function-signature>
+	</function>
+
+
+	
+    <!-- 将1-2 转换成 中文-英文-->
+	<function>
+		<name>changeCode2lan</name>
+		<function-class>
+			com.transn.service.pub.DictService
+		</function-class>
+		<function-signature>
+			java.lang.String changeCode2lan(java.lang.String)
+		</function-signature>
+	</function>
+</taglib>

@@ -1,0 +1,286 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+padding:0;margin:0; font-family:"微软雅黑"; font-weight:normal;}
+table{border-collapse: collapse;border-spacing:0;}
+fieldset,img{border:0;}
+ol, ul ,li,dd{list-style: none;}
+caption,th{text-align: left;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;font-size:100%;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+a:link{text-decoration:none;}
+a:active{text-decoration:none;}
+a:hover{ }
+a:visited{ text-decoration:none;}
+
+/*--------------------------------------------------结构性布局集合---------------------------------------------------------*/
+/*网站头部*/
+#top{ display:block; margin:0 auto; width:100%;background:url(images/top_bg2.png) repeat-x; height:36px; border-bottom:1px #ccc solid;position:relative; z-index:2000}
+#top #topcontent{ display:block; margin:0 auto; width:1002px; }
+#top #topcontent .logo{background:url(images/top_logo.png) no-repeat; width:140px; height:35px; display:block; float:left;}
+#top #topcontent .login{ float:right; width:845px; height:36px;color:#777; font-size:12px; font-family:"微软雅黑"; line-height:36px; text-align:left; z-index:2000;} 
+#top #topcontent .login li{ display:block; float:left; padding-left:10px; position:relative;}
+.login_input{ width:98px;  border:none; margin-top:7px;}
+a.login_btn,a.login_btn:visited{ padding:1px 8px; color:#777; line-height:34px; display:block; text-align:center;}
+a.login_btn:hover{ color:#030;}
+.banener_content{  display:block; margin:0 auto; width:100%; height:96px; background:url(images/home_banner_bg.png) repeat-x; height:521px;}
+/*   二级头部     */
+.navgate_t{ background:url(images/navs.png) no-repeat; color:#fff; position:relative;}
+.navgate_bar_blue_first{ background-position:0px -148px; background-repeat:repeat-x; height:60px; margin-bottom:21px;}
+.navgate_bar_blue_sub{ background-position:0px -222px; background-repeat:repeat-x; height:60px; margin-bottom:21px;}
+.navgate_bar_title_first{background-position:0px 0px; display:block; float:left; font-size:16px; line-height:60px; padding-left:50px; }
+.navgate_bar_title_sub{background-position:0px -74px; display:block; float:left; font-size:16px; line-height:60px; padding-left:50px; }
+a.navgate_button{background-position:0px -408px; display:block; width:240px; height:45px; font-size:24px; line-height:45px; margin:12px; text-align:center; color:#fff; }
+/*底部*/
+#foot{ display:none; margin:2px auto; width:100%;height:120px; text-align:center; padding-top:20px; border-top:#ccc 1px dotted; }
+#foot #footcontent{ display:block; margin:2px auto; width:1002px;height:120px; text-align:center; padding-top:20px; }
+#foot .foot_link{width:202px; line-height:22px; color:#000 display:block; float:left; font-size:18px; font-weight:bold; margin-left:48px; text-align:left}
+#foot .foot_link a{color:#999999; font-weight:normal; font-size:14px;}
+#foot .foot_link a:hover{ color:#0053a4}
+#copright{ margin:0 auto;color:#999999; font-size:12px; background:url(images/top_bg2.png) repeat-x; border-top:#ccc 1px solid; height:36px; text-align:right; line-height:36px; }
+/*中心头部*/
+#Itop{ width:100%; background:url(images/top_bg2.png) repeat-x; height:36px; border-bottom:1px #ccc solid;position:relative;z-index:2000;}
+#Itop  #Tcontent{ width:1002px; margin:0 auto; }
+#Ilogo{ background:url(images/top_logo.png) no-repeat; width:140px; height:35px; display:block; float:left; }
+#Itopmenu{ display:block;  text-align:right;float:right; margin-top:6px;}
+#Itopmenu li{display:block; float:left;}
+#Itopmenu li a{color:#0053a4;margin-right:14px;}
+#Itopmenu li a.info{ display:block;background:url(images/icon_mail.png) no-repeat 0px 6px; line-height:17px; font-size:14px;padding: 4px 0px 4px 24px;}
+#Itopmenu li a.iol{ display:block;background:url(images/icon_iol.png) no-repeat; line-height:17px;font-size:14px; padding: 4px 0px 4px 24px;}
+#Itopmenu li a.close{ display:block;background:url(images/icon_exit.png) no-repeat; line-height:17px;font-size:14px;padding: 4px 0px 4px 24px;}
+#Itopmenu li a:hover{color:#003333;}
+
+.tab_nav{ border-bottom:1px solid #ccc; padding-top:21px; height:31px;}
+.tab_nav_content{ font-family:"微软雅黑"; width:960px; margin:0 auto; position:relative;}
+.tab_nav_content ul{ float:left;}
+.tab_nav_content li{ display:block; float:left; background-color:#f6f6f6; height:30px; margin-right:13px; border:1px solid #ccc; color:#bdbdbd; text-align:center; line-height:30px; cursor:pointer;}
+.tab_nav_content li.cur{ background-color:#FFFFFF; color:#2265a9; height:31px; border-bottom:none; line-height:31px; }
+.tabwid_91{ width:91px;}
+.tabwid_150{ width:150px;}
+
+/*分页样式*/
+.pageDiv { font-size:12px; text-align:center; color:#5b9cba;margin:11px 0;}
+.pageDiv .pageInput{ width:30px; height:18px;line-height:18px; padding:0 1px;}
+.pageDiv .numeral { padding:3px 6px; background:#55b1db; color:#fff; border:1px solid #5196b6;}
+
+
+/*--------------------------------------------------通用字体样式集合---------------------------------------------------------*/
+.title_div{ padding:11px 0px; border-bottom:1px solid #ccc; margin-bottom:11px;}
+.title{background:url(images/comm_title_bg.png)  left center no-repeat;}
+.title_first{ background-position:0px 0px;font-size:18px; color:#666; padding-left:37px; line-height:26px;}
+.title_two{background-position:0px -26px; padding-left:34px; line-height:23px;font-size:14px}
+.title_three{background-position:0px -49px; padding-left:34px; line-height:23px;;font-size:14px; }
+
+
+
+
+
+/*--------------------------------------------------通用TAB样式---------------------------------------------------------*/
+a.li02{ width:150px; height:32px; font-size:16px; text-align:center; font-family:"微软雅黑"; padding-top:5px; color:#5091d1;  background:url(images/tabBtn.png) no-repeat; display:inline-block; margin-bottom:3px; cursor:pointer;}
+a.li02:hover,a.li02.cur{ width:150px; height:32px; font-size:16px; text-align:center; font-family:"微软雅黑"; padding-top:5px; color:#fff;  background:url(images/tabBtn.png) 0 -111px no-repeat; display:inline-block; margin-bottom:3px; cursor:pointer;}
+a.li01{ width:150px; height:32px; font-size:16px; text-align:center; font-family:"微软雅黑"; padding-top:5px; color:#5091d1;  background:url(images/tabBtn.png) no-repeat 0 -74px; display:inline-block; margin-bottom:3px; cursor:pointer;}
+a.li01:hover,a.li01.cur{ width:150px; height:32px; font-size:16px; text-align:center; font-family:"微软雅黑"; padding-top:5px; color:#fff;  background:url(images/tabBtn.png) 0 -37px no-repeat; display:inline-block; margin-bottom:3px; cursor:pointer;}
+
+
+.nafgate_third{ position:relative;}
+.nafgate_third li{ position:absolute;}
+
+/*--------------------------------------------------通用button样式集合---------------------------------------------------------*/
+a.common_button{display:block; float:left; margin-top:11px; margin-right:11px;color:#fff; background:url(images/buttons.png)  no-repeat; text-align:center; color:#fff;}
+a.btn_color_blue{ background-position: -1px -1px}/*一级颜色蓝*/
+a.btn_color_green{ background-position:-159px -1px;}/*一级颜色绿*/
+a.blue_brother{background-position:-1px -42px;}/*一级颜色蓝同级*/
+a.green_brother{background-position:-159px -42px;}/*一级颜色蓝同级*/
+a.blue_sub{background-position:-1px -191px;}/*一级颜色蓝子级*/
+a.blue_sub2{background-position:-1px -293px;}
+a.green_sub{background-position:-159px -191px;}/*一级颜色绿子级*/
+a.blue_after_word{background-position:-1px -123px;}
+a.green_after_word{background-position:-159px -123px;}
+
+a.blueCheck { background:url(images/buttons.png) no-repeat -1px -123px; color:#fff; text-align:center; width:80px; height:25px; display:inline-block; cursor:pointer; margin:0 5px;}
+a:hover.blueCheck { background:url(images/buttons.png) no-repeat -1px -158px; color:#fff; text-align:center; width:80px; height:25px; display:inline-block; cursor:pointer; line-height:25px; margin:0 5px;}
+
+a.blueInput {background: url("images/buttons.png") no-repeat 0 0;color: #FFFFFF;text-align: center; line-height:29px; display:inline-block; width:98px; cursor:pointer;}
+a:hover.blueInput {background: url("images/buttons.png") no-repeat 0 -41px;color: #FFFFFF;text-align: center; line-height:29px; display:inline-block; width:98px; cursor:pointer;}
+
+a.blueInput120 {background: url("images/buttons.png") no-repeat 0 0;color: #FFFFFF;text-align: center; line-height:29px; display:inline-block; width:120px; cursor:pointer;}
+a:hover.blueInput120 {background: url("images/buttons.png") no-repeat 0 -41px;color: #FFFFFF;text-align: center; line-height:29px; display:inline-block; width:120px; cursor:pointer;}
+
+a.historyCheck { background:url(images/buttons.png) no-repeat -304px -43px; width:134px; height:23px; line-height:23px; display:inline-block; font-size:14px; color:#fff; padding-left:20px;}
+
+a.btnCheck { background:url(images/buttons.png) repeat-x -1px -125px; line-height:23px; padding-left:20px; width:60px; height:23px; display:inline-block; color:#fff; cursor:pointer; margin-left:11px;}
+a.btnCheck:hover {background:url(images/buttons.png) repeat-x -1px -158px; line-height:23px; padding-left:20px; width:60px; height:23px; display:inline-block; color:#fff; cursor:pointer; margin-left:11px;}
+
+a.longblue { background:url(images/buttons.png) no-repeat -1px -1px; display:inline-block; width:135px; height:31px; line-height:31px; text-align:center; color:#fff; cursor:pointer;}
+
+a.longblue:hover { background:url(images/buttons.png) no-repeat -1px -84px; display:inline-block; width:135px; height:31px; line-height:31px; text-align:center; color:#fff; cursor:pointer;}
+
+
+.btn_width_first{height:31px;width:135px; line-height:31px;}/*一级宽度*/
+.btn_width_sub{ width:103px; height:27px;  line-height:27px;}/*二级宽度*/
+.btn_width_sub2{ width:125px; height:35px;  line-height:35px;}/*二级宽度*/
+.btn_width_after{ width:80px; height:25px;  line-height:25px;}/*文字后的button宽度*/
+.btn_color_blue:hover,.blue_brother:hover{ background-position:-1px -84px;}
+.blue_after_word:hover{background-position:-1px -156px;}
+.blue_sub:hover{ background-position:-1px -228px;}
+.green_sub:hover{ background-position:-159px -228px;}
+.green_after_word:hover{background-position:-159px -156px;}
+.btn_color_green:hover,.green_brother:hover{background-position:-159px -84px;}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------通用input样式集合---------------------------------------------------------*/
+.input_gra{border:#ccc 1px solid; height:27px; line-height:27px; margin:4px 0px; color:#666; font-size:13px; margin:11px;}
+.input_wid_stand{ width:277px;}
+.input_w220 {width:220px;}
+.input_w120 {width:120px;}
+
+
+/*--------------------------------------------------tab选项卡集合---------------------------------------------------------*/
+.nafgate_sub{cursor:pointer;}
+.nafgate_sub li{ background:url(images/tabsbg.png) -150px 0px no-repeat; width:150px; height:40px; line-height:30px; display:block; float:left; color:#fff; font-size:16px; text-align:center;}
+.nafgate_sub li.cur{ background-position:0px 0px; }
+
+.nafgate_third{ height:27px;  position:relative; }
+.nafgate_third li{ z-index:99;background:url(images/tabcs.png) 0 -27px no-repeat;
+height:27px; width:96px; padding-right:20px;display:block;color:#5091d1; position:absolute; top:0; left:0; line-height:27px; text-align:center;}
+.nafgate_third li.cur12{ z-index:66;
+height:27px; width:96px; padding-right:20px;display:block;position:absolute; top:0; left:100px; line-height:27px; text-align:center;}
+.nafgate_third li.last12{ z-index:33;
+height:27px; width:96px; padding-right:20px;display:block;color:#666; position:absolute; top:0; left:200px; line-height:27px; text-align:center;}
+.nafgate_third li.cur1{ z-index:32;
+height:27px; width:96px; padding-right:20px;display:block;position:absolute; top:0; left:300px; line-height:27px; text-align:center;}
+.nafgate_third li.last1{ z-index:31;
+height:27px; width:96px; padding-right:20px;display:block;color:#666; position:absolute; top:0; left:400px; line-height:27px; text-align:center;}
+.nafgate_third li.cur2{ z-index:30;
+height:27px; width:96px; padding-right:20px;display:block;position:absolute; top:0; left:500px; line-height:27px; text-align:center;}
+.nafgate_third li.last2{ z-index:29;
+height:27px; width:96px; padding-right:20px;display:block;color:#666; position:absolute; top:0; left:600px; line-height:27px; text-align:center;}
+.nafgate_third li.cur3{ z-index:28;
+height:27px; width:96px; padding-right:20px;display:block;position:absolute; top:0; left:700px; line-height:27px; text-align:center;}
+.nafgate_third li.last3{ z-index:27;
+height:27px; width:96px; padding-right:20px;display:block;color:#666; position:absolute; top:0; left:800px; line-height:27px; text-align:center;}
+.nafgate_third li:hover,.nafgate_third li.cur{ z-index:9999;background:url(images/tabcs.png) no-repeat;}
+
+
+/*--------------------------------------------------table表格样式集合---------------------------------------------------------*/
+.table_stand{}
+.tr_nomarl{ padding-left:11px;background:url(images/navs.png) repeat-x; color:#fff; text-align:left;}
+.tr_base{ background-position:0px -296px;height:30px; line-height:30px; border-right:1px solid #ccc;}
+.tr_even{background-position:0px -326px;height:30px; line-height:30px;border-right:1px solid #ccc;}
+.table_stand tr {border-left:1px solid #ccc;}
+.table_stand td{ padding:11px 11px 11px 5px; color:#666; font-size:13px;border-right:1px solid #ccc; border-bottom:1px solid #ccc; text-align:left;}
+
+
+
+
+/*--------------------------------------------------弹出窗口样式---------------------------------------------------------*/
+
+
+/*页面切换样式--------------*/
+.mainShow{ background:#f3f3f3; position:relative;}
+.pageRemove,.pageLoad,.pageActive{ display:inline-block; float:left;   width: 100%;}
+.glideLoad{ width:20px; height:20px; background:url(../images/loading.gif); display:block; left:25%; position:absolute; z-index:10;}
+
+#centerMain{ width:975px; margin:0 auto;}
+.glideLoad{ background: url(images/loading.gif) center center no-repeat; width:32px; height:32px; position:fixed; left:40%; top:40%; display:block;}
+/*左边栏样式*/
+
+
+
+.popmenu{ position:fixed; left:0px; top:11px; font-size:14px; background-color:#999; color:#666; width:101px; height:331px; z-index:1000; text-align:center;}
+.popmenu a{ color:#666; clear:both; display:block; cursor:pointer;}
+.popmenu li.popmenu_tool a{ display:block;}
+.popmenu_pos_cur{ background:url(images/Agent_platform_popmenubgs.png)  0px -101px no-repeat; width:101px; height:101px; display:block;}
+.popmenu_pos_cur_pre{background:url(images/Agent_platform_popmenubgs.png)  0px 0px no-repeat; width:101px; height:101px;}
+
+/*--------------------------------------------------通用工具icon---------------------------------------------------------*/
+.print_down_modiy{background:url(images/age_tool_tools.png) no-repeat; width:40px; height:40px; display:block; float:left; margin-left:11px;}
+.tool_print{ background-position:-122px 0px;}
+.tool_down{ background-position:-61px 0px;}
+.tool_modiy{ background-position:0px 0px;}
+
+
+/*显示与隐藏*/
+.undis{ display:none;}
+.dis,a.dis{ display:inline-block;}
+
+/*清除 浮动 margin padding*/
+.cl { clear:both;}
+.fr { float:right;}
+.fl { float:left;}
+.cf { float:none;}
+.cm { margin:0;}
+.pm { padding:0;}
+
+/*--------------------------------------------------表格样式---------------------------------------------------------*/
+.rank_kuang{ border-top:1px solid #ccc; border-bottom:1px solid #ccc; margin-top:4px; width:1000px; margin:auto; font-size:12px;}
+.rank_tab{ font-size:13px; color:#666; border-spacing: 0; margin-top:10px;}
+.rank_tab tr{border-bottom: 1px dotted #CCCCCC;}
+.rank_tab td{ line-height:50px; padding:0 8px;table-layout: fixed;overflow: hidden;white-space: nowrap;
+}
+.bluebar{ border:1px solid #aeceec; height:13px; background:url(images/bluebar_bg.gif) repeat-x; width:200px;}
+.nuamber_admin_show { float:left; margin:20px 0 20px 0;}
+.nuamber_admin_show a { font-size:14px; color:#fff; text-align:center; padding:0 10px;margin-right:10px; display:inline-block;}
+.blueBg {float:left; height:21px; line-height:21px; background:url(images/blueBg.gif) repeat-x; border:1px solid #5196b6; padding:0 10px; color:#fff; margin-right:5px; font-size:14px; height:23px;}
+
+.td_div{ display:block; width:100px; overflow:hidden;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;font-size: 13px;}
+.tdwid200{ width:200px;}
+
+.listtable{ color:#666; font-size:14px; margin-top:21px;}
+/*--------------------------------------------------进度条样式---------------------------------------------------------*/
+.bluebar{ border:1px solid #aeceec; height:13px; background:url(images/bluebar_bg.gif) repeat-x; width:200px;}
+
+
+
+/*....................................下拉列表样式............................*/
+.height {
+    height: 27px;
+    line-height: 27px;
+    padding-bottom: 0;
+}
+.showVisOpt {
+    cursor: pointer;
+}
+.c_left {
+    border: 1px solid #CCCCCC;
+    float: left;
+    font-size: 14px;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 10px;
+    position: relative;
+    text-align: left;
+    width: 126px;
+}
+.input_Frame {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    height: 33px;
+    width: 318px;
+}
+.c_p2 {
+    background: url("images/sanjiao.gif") repeat-x scroll 0 -43px transparent;
+}
+.c_position {
+    background: url("images/sanjiao.gif") repeat-x scroll 0 -43 transparent;
+    height: 38px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 38px;
+}
+
+
+/*下一页样式*/
+
+.page_nav_tool{clear:both}
+.page_left{ background:url(images/right.png) -138px 0px no-repeat; width:69px; height:70px; display:block; float:left;z-index:20000; cursor:pointer}
+.page_left:hover{ background-position:-207px 0px;}
+.page_right{ background:url(images/right.png) 0px 0px no-repeat; width:69px; height:70px; display:block; float:right;z-index:2000; cursor:pointer;}
+.page_right:hover{ background-position:-69px 0px;}

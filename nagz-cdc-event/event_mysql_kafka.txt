@@ -1,0 +1,20 @@
+EventTableChangesToAggregateTopicRelay
+
+配置文件在 eventuate-local-java-cdc-service\src\main\resources\application.properties
+
+
+
+./kafka-consumer-groups.sh  --bootstrap-server im01.demo.com:9092 --describe --group msg_tip_groupaaa
+
+
+./kafka-consumer-groups.sh  --bootstrap-server im01.demo.com:9092 --describe --group  my_sql_connector-dbhistory
+
+
+执行如下命令查看某个log文件，这里 --print-data-log 是表示查看消息内容的，不加此项是查看不到详细的消息内容。如果要查看多个log文件可以用逗号分隔。 
+bin/kafka-run-class.sh kafka.tools.DumpLogSegments --files /tmp/kafka-logs/test3-0/00000000000000000000.log  --print-data-log  
+
+/home/kafka/kafka_2.12-0.11.0.0/bin/kafka-run-class.sh kafka.tools.DumpLogSegments --files /tmp/kafka-logs/nagz_event_cdc-0/00000000000000000081.log --print-data-log
+
+./kafka-run-class.sh kafka.tools.DumpLogSegments --files /tmp/kafka-logs/__consumer_offsets-14/00000000000000000138.log --print-data-log  
+
+./kafka-consumer-offset-checker.sh  --zookeeper 192.168.0.252:2181  --topic file2influxdb --group influxdb

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: nagz_cdc_event
+  zipkin:
+    baseUrl: http://dev01.demo.com:9411
+    enabled: true
+server:
+  port: 52100
+  
+
+

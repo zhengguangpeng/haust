@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.hongtoo.nagz</groupId>
+    <artifactId>nagz-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.hongtoo.nagz</groupId>
+  <artifactId>nagz-cdc-event</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>nagz-cdc-event</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+  	<dependency>
+            <groupId>mil.nga</groupId>
+            <artifactId>wkb</artifactId>
+            <version>1.0.2</version>
+    </dependency>
+     <dependency>
+            <groupId>com.github.shyiko</groupId>
+            <artifactId>mysql-binlog-connector-java</artifactId>
+            <version>0.9.0</version>
+        </dependency>
+  	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-jdbc</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter</artifactId>
+	</dependency>
+	
+	<dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-spectator</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-atlas</artifactId>
+    </dependency>  
+	
+    <!-- https://mvnrepository.com/artifact/io.debezium/debezium-embedded -->
+    <!-- 
+	<dependency>
+    	<groupId>io.debezium</groupId>
+    	<artifactId>debezium-embedded</artifactId>
+    	<version>0.6.0</version>   
+    	<exclusions>
+    		<exclusion>
+    			<artifactId>slf4j-log4j12</artifactId>
+    			<groupId>org.slf4j</groupId>
+    		</exclusion>
+    	</exclusions> 	
+	</dependency> -->
+	
+	<!-- https://mvnrepository.com/artifact/io.debezium/debezium-connector-mysql -->
+	<!--  
+	<dependency>
+   	 <groupId>io.debezium</groupId>
+   	 <artifactId>debezium-connector-mysql</artifactId>
+    	<version>0.6.0</version>
+	</dependency>-->
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
+	<dependency>
+    	<groupId>org.apache.kafka</groupId>
+    	<artifactId>kafka-clients</artifactId>
+    	<version>0.11.0.0</version>
+    	<exclusions>
+    		<exclusion>
+    			<artifactId>slf4j-log4j12</artifactId>
+    			<groupId>org.slf4j</groupId>
+    		</exclusion>
+    	</exclusions> 	
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
+	<dependency>
+   		<groupId>org.apache.curator</groupId>
+    	<artifactId>curator-recipes</artifactId>   
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.curator/curator-client -->
+	<dependency>
+    	<groupId>org.apache.curator</groupId>
+    	<artifactId>curator-client</artifactId>  
+    	<version>2.10.0</version>  	
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.curator/apache-curator -->
+	<!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
+	<dependency>
+    	<groupId>org.apache.curator</groupId>
+    	<artifactId>curator-framework</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>com.hongtoo.nagz</groupId>
+		<artifactId>nagz-redis</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	
+	<dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.6</version>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-core</artifactId>
+    </dependency>
+    <dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/net.logstash.logback/logstash-logback-encoder -->
+	<dependency>
+    	<groupId>net.logstash.logback</groupId>
+    	<artifactId>logstash-logback-encoder</artifactId>
+    	<version>4.11</version>
+	</dependency>
+	
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	<dependency>
+    	<groupId>org.apache.poi</groupId>
+    	<artifactId>poi</artifactId>
+    	<version>3.16</version>
+	</dependency>
+	
+	<dependency>
+        <groupId>com.ctrip.framework.apollo</groupId>
+        <artifactId>apollo-client</artifactId>
+        <version>0.6.3</version>
+    </dependency>    
+    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>     
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-api</artifactId>
+             <version>0.11.0.0</version>
+             <exclusions>
+    		<exclusion>
+    			<artifactId>slf4j-log4j12</artifactId>
+    			<groupId>org.slf4j</groupId>
+    		</exclusion>
+    	</exclusions> 	
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-runtime</artifactId>
+            <version>0.11.0.0</version>
+            <exclusions>
+    		<exclusion>
+    			<artifactId>slf4j-log4j12</artifactId>
+    			<groupId>org.slf4j</groupId>
+    		</exclusion>
+    	</exclusions> 	
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-json</artifactId>
+            <version>0.11.0.0</version>
+            <exclusions>
+    		<exclusion>
+    			<artifactId>slf4j-log4j12</artifactId>
+    			<groupId>org.slf4j</groupId>
+    		</exclusion>
+    	</exclusions> 	
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-file</artifactId>
+            <version>0.11.0.0</version>
+            <exclusions>
+    		<exclusion>
+    			<artifactId>slf4j-log4j12</artifactId>
+    			<groupId>org.slf4j</groupId>
+    		</exclusion>
+    	</exclusions> 	
+        </dependency>
+  </dependencies>
+</project>

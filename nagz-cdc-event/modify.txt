@@ -1,0 +1,32 @@
+BinlogReader.java
+
+protected void handleUpdate(Event event) throws InterruptedException {
+
+          if (recordMaker != null) {
+            List<Entry<Serializable[], Serializable[]>> rows = update.getRows();
+            Long ts = context.clock().currentTimeInMillis();
+            //rockyzheng modified on 2018/2/22 change the time to event header time,it's the really happen time
+            ts = event.getHeader().getTimestamp();
+            int count = 0;
+
+
+EmbeddedEngine.java
+
+  protected static class EmbeddedConfig extends WorkerConfig {
+        private static final ConfigDef CONFIG;
+
+        static {
+            ConfigDef config = baseConfigDef();
+            Field.group(config, "file", OFFSET_STORAGE_FILE_FILENAME);
+            Field.group(config, "kafka", OFFSET_STORAGE_KAFKA_TOPIC);
+            //rockyzheng added on 2018/2/12 kafka 0.11 verion needed
+            Field.group(config, "kafka", OFFSET_STORAGE_KAFKA_PARTITIONS);
+            Field.group(config, "kafka", OFFSET_STORAGE_KAFKA_REPLICATION_FACTOR);
+            
+            CONFIG = config;
+        }
+
+        protected EmbeddedConfig(Map<String, String> props) {
+            super(CONFIG, props);
+        }
+    }
